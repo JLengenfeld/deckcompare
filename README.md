@@ -1,5 +1,7 @@
 # deckcompare
 
+[![Build Status](https://travis-ci.org/JLengenfeld/deckcompare.svg?branch=master)](https://travis-ci.org/JLengenfeld/deckcompare)
+
 The idea is to build a tool that can compare .o8d files containing decks from the card game Android: Netrunner.
 Those deck lists can be found on http://netrunnerdb.com/ for example.
 
