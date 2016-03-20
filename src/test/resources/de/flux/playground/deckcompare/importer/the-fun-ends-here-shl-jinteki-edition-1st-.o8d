@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="0f38e453-26df-4c04-9d67-6d43de939c77">
+  <section name="Identity">
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda07029">MaxX: Maximum Punk Rock</card>
+  </section>
+  <section name="R&amp;D / Stack">
+    <card qty="3" id="bc0f047c-01b1-427f-a439-d451eda01002">Déjà Vu</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda01007">Corroder</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda01011">Mimic</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda01014">Yog.0</card>
+    <card qty="2" id="bc0f047c-01b1-427f-a439-d451eda01018">Account Siphon</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda01026">Femme Fatale</card>
+    <card qty="3" id="bc0f047c-01b1-427f-a439-d451eda01050">Sure Gamble</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda02009">Plascrete Carapace</card>
+    <card qty="3" id="bc0f047c-01b1-427f-a439-d451eda02022">Liberated Account</card>
+    <card qty="2" id="bc0f047c-01b1-427f-a439-d451eda02101">Retrieval Run</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda03035">Levy AR Lab Access</card>
+    <card qty="3" id="bc0f047c-01b1-427f-a439-d451eda03054">Same Old Thing</card>
+    <card qty="2" id="bc0f047c-01b1-427f-a439-d451eda04061">Keyhole</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda06033">D4v1d</card>
+    <card qty="2" id="bc0f047c-01b1-427f-a439-d451eda06073">Inject</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda07031">Amped Up</card>
+    <card qty="3" id="bc0f047c-01b1-427f-a439-d451eda07032">I&#039;ve Had Worse</card>
+    <card qty="2" id="bc0f047c-01b1-427f-a439-d451eda07035">Wanton Destruction</card>
+    <card qty="3" id="bc0f047c-01b1-427f-a439-d451eda07036">Day Job</card>
+    <card qty="3" id="bc0f047c-01b1-427f-a439-d451eda07040">Eater</card>
+    <card qty="2" id="bc0f047c-01b1-427f-a439-d451eda08021">Hacktivist Meeting</card>
+    <card qty="2" id="bc0f047c-01b1-427f-a439-d451eda08043">Turntable</card>
+    <card qty="3" id="bc0f047c-01b1-427f-a439-d451eda08103">DDoS</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda09030">Apocalypse</card>
+  </section>
+  <notes><![CDATA[
+
+Shout outs to LSK for this list. Tinkered the list to my liking and for speed/matchups, this is a deck I&#039;ve been playing consistently in GNK&#039;s and Stimhack League to great success. Changes are as follows:
+
+
+Removed
+
+2x Imp
+1x Daily Casts
+2x Queen&#039;s Gambit
+1x Knifed
+
+Added
+
+
+2x Inject
+2x Hacktivist Meeting
+2x Turntable
+
+
+Removed Imp due to predominance of CVS in the meta and clunky turn structures with Imp. Tag riding happens often so having Daily Casts sit with tags doesn&#039;t work. Queen&#039;s Gambit is literally a gambit I don&#039;t want to make a mistake on, and Knifed, although great, doesn&#039;t do much if I&#039;m going to be blowing up all the ICE.
+
+Added Inject to move faster into Siphon pieces to combat the needed turn 2-4 aggression VS HB:EtF, alongside with Hackvtivist in a rez heavy meta. Turntable because I love EDM and taking Astro counters from my opponents.
+
+Here are some links to success in tournaments I used this deck:
+
+401 Games
+Black Knight Games 1
+Heroes World
+Black Knight Games 2
+Stimhack Finals 1
+Stimhack Finals 2
+
+
+Going into the Post MWL meta, I&#039;d probably just cut the Femme, and add a Inject to make this beast go faster. I barely use Femme as it is, and the deck has legs already to be such a threat overall. Hope you all enjoyed the finals!!]]></notes>
+</deck>
