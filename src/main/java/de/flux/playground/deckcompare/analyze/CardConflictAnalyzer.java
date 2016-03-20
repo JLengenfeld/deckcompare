@@ -2,7 +2,10 @@ package de.flux.playground.deckcompare.analyze;
 
 import de.flux.playground.deckcompare.dto.Card;
 
-public class CardConflictAnalyzer {
+public final class CardConflictAnalyzer {
+    
+    private CardConflictAnalyzer() {
+    }
 
     public static boolean conflicted(Card card, Card otherCard) {
 
