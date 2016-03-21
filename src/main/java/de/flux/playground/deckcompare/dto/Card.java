@@ -17,12 +17,12 @@ public class Card {
     private String id = null;
     private String value = null;
 
-    @XmlAttribute
-    public int getQty() {
+    @XmlAttribute(name = "qty")
+    public int getQuantity() {
         return qty;
     }
 
-    public void setQty(int qty) {
+    public void setQuantity(int qty) {
         Validate.inclusiveBetween(MIN_QUANTITY, MAX_QUANTITY, qty);
         this.qty = qty;
     }

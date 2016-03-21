@@ -12,7 +12,7 @@ public final class CardConflictAnalyzer {
         boolean isConflicted = false;
 
         if (card.equals(otherCard)) {
-            int overallQunatity = card.getQty() + otherCard.getQty();
+            int overallQunatity = card.getQuantity() + otherCard.getQuantity();
             isConflicted = overallQunatity > 3;
         }
 

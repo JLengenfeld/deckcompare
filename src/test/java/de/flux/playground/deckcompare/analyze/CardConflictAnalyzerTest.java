@@ -18,13 +18,13 @@ public class CardConflictAnalyzerTest {
     @Before
     public void before() {
         cardQuantityTwo.setValue("FirstCard");
-        cardQuantityTwo.setQty(2);
+        cardQuantityTwo.setQuantity(2);
 
         cardQuantityOne.setValue("FirstCard");
-        cardQuantityOne.setQty(1);
+        cardQuantityOne.setQuantity(1);
 
         otherCardQuantityTwo.setValue("SecondCard");
-        otherCardQuantityTwo.setQty(2);
+        otherCardQuantityTwo.setQuantity(2);
     }
 
     @Test
