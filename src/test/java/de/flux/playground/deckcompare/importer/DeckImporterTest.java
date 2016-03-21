@@ -47,8 +47,7 @@ public class DeckImporterTest {
 
     private File obtainDeckFile(String fileName) throws URISyntaxException {
         URL url = DeckImporterTest.class.getResource(fileName);
-        File deckFile = new File(url.toURI());
-        return deckFile;
+        return new File(url.toURI());
     }
 
 }
