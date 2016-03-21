@@ -13,18 +13,18 @@ public class Card {
 
     private static final int MIN_QUANTITY = 1;
     private static final int MAX_QUANTITY = 3;
-    private int qty = 0;
+    private int quantitiy = 0;
     private String id = null;
     private String value = null;
 
     @XmlAttribute(name = "qty")
     public int getQuantity() {
-        return qty;
+        return quantitiy;
     }
 
     public void setQuantity(int qty) {
         Validate.inclusiveBetween(MIN_QUANTITY, MAX_QUANTITY, qty);
-        this.qty = qty;
+        this.quantitiy = qty;
     }
 
     @XmlAttribute
@@ -47,7 +47,7 @@ public class Card {
 
     @Override
     public String toString() {
-        return "Card [qty=" + qty + ", id=" + id + ", value=" + value + "]" + System.getProperty("line.separator");
+        return "Card [quantity=" + quantitiy + ", id=" + id + ", value=" + value + "]" + System.getProperty("line.separator");
     }
 
     @Override
@@ -57,12 +57,15 @@ public class Card {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj)
+        if (this == obj) {
             return true;
-        if (obj == null)
+        }
+        if (obj == null) {
             return false;
-        if (getClass() != obj.getClass())
+        }
+        if (getClass() != obj.getClass()) {
             return false;
+        }
         Card other = (Card) obj;
         return new EqualsBuilder().append(id, other.id).append(value, other.value).isEquals();
     }

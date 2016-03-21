@@ -9,26 +9,26 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Deck {
 
-    private String game;
-    private List<Section> section;
+    private String id;
+    private List<Section> sections;
     private String notes;
 
-    @XmlAttribute
-    public String getGame() {
-        return game;
+    @XmlAttribute(name = "game")
+    public String getId() {
+        return id;
     }
 
-    public void setGame(String game) {
-        this.game = game;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    @XmlElement
-    public List<Section> getSection() {
-        return section;
+    @XmlElement(name = "section")
+    public List<Section> getSections() {
+        return sections;
     }
 
-    public void setSection(List<Section> sections) {
-        this.section = sections;
+    public void setSections(List<Section> sections) {
+        this.sections = sections;
     }
 
     public String getNotes() {
@@ -41,7 +41,7 @@ public class Deck {
 
     @Override
     public String toString() {
-        return "Deck [game=" + game + ", section=" + section + ", notes=" + notes + "]";
+        return "Deck [id=" + id + ", sections=" + sections + ", notes=" + notes + "]";
     }
 
 }

@@ -3,13 +3,14 @@ package de.flux.playground.deckcompare.dto;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType
 public class Section {
 
     private String name;
-    private List<Card> card;
+    private List<Card> cards;
 
     @XmlAttribute
     public String getName() {
@@ -20,17 +21,18 @@ public class Section {
         this.name = name;
     }
 
-    public List<Card> getCard() {
-        return card;
+    @XmlElement(name = "card")
+    public List<Card> getCards() {
+        return cards;
     }
 
-    public void setCard(List<Card> card) {
-        this.card = card;
+    public void setCards(List<Card> cards) {
+        this.cards = cards;
     }
 
     @Override
     public String toString() {
-        return "Section [name=" + name + ", card=" + card + "]" + System.getProperty("line.separator");
+        return "Section [name=" + name + ", card=" + cards + "]" + System.getProperty("line.separator");
     }
 
 }
