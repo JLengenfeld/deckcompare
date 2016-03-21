@@ -5,69 +5,29 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 import org.apache.commons.lang3.Validate;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+
+@Data
+@EqualsAndHashCode(exclude = { "quantity" })
 @XmlType
 public class Card {
 
     private static final int MIN_QUANTITY = 1;
     private static final int MAX_QUANTITY = 3;
-    private int quantitiy = 0;
+
+    @Getter(onMethod = @__({ @XmlAttribute(name = "qty") }) )
+    private int quantity = 0;
+    @Getter(onMethod = @__({ @XmlAttribute }) )
     private String id = null;
+    @Getter(onMethod = @__({ @XmlValue }) )
     private String value = null;
 
-    @XmlAttribute(name = "qty")
-    public int getQuantity() {
-        return quantitiy;
-    }
-
-    public void setQuantity(int qty) {
-        Validate.inclusiveBetween(MIN_QUANTITY, MAX_QUANTITY, qty);
-        this.quantitiy = qty;
-    }
-
-    @XmlAttribute
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    @XmlValue
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    @Override
-    public String toString() {
-        return "Card [quantity=" + quantitiy + ", id=" + id + ", value=" + value + "]" + System.getProperty("line.separator");
-    }
-
-    @Override
-    public int hashCode() {
-        return new HashCodeBuilder().append(id).append(value).toHashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        Card other = (Card) obj;
-        return new EqualsBuilder().append(id, other.id).append(value, other.value).isEquals();
+    public void setQuantity(int quantity) {
+        Validate.inclusiveBetween(MIN_QUANTITY, MAX_QUANTITY, quantity);
+        this.quantity = quantity;
     }
 
 }

@@ -6,33 +6,16 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import lombok.Data;
+import lombok.Getter;
+
+@Data
 @XmlType
 public class Section {
 
+    @Getter(onMethod = @__({ @XmlAttribute }) )
     private String name;
+    @Getter(onMethod = @__({ @XmlElement(name = "card") }) )
     private List<Card> cards;
-
-    @XmlAttribute
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @XmlElement(name = "card")
-    public List<Card> getCards() {
-        return cards;
-    }
-
-    public void setCards(List<Card> cards) {
-        this.cards = cards;
-    }
-
-    @Override
-    public String toString() {
-        return "Section [name=" + name + ", card=" + cards + "]" + System.getProperty("line.separator");
-    }
 
 }

@@ -6,42 +6,17 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import lombok.Data;
+import lombok.Getter;
+
+@Data
 @XmlRootElement
 public class Deck {
 
+    @Getter(onMethod = @__({ @XmlAttribute(name = "game") }) )
     private String id;
+    @Getter(onMethod = @__({ @XmlElement(name = "section") }) )
     private List<Section> sections;
     private String notes;
-
-    @XmlAttribute(name = "game")
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    @XmlElement(name = "section")
-    public List<Section> getSections() {
-        return sections;
-    }
-
-    public void setSections(List<Section> sections) {
-        this.sections = sections;
-    }
-
-    public String getNotes() {
-        return notes;
-    }
-
-    public void setNotes(String notes) {
-        this.notes = notes;
-    }
-
-    @Override
-    public String toString() {
-        return "Deck [id=" + id + ", sections=" + sections + ", notes=" + notes + "]";
-    }
 
 }
