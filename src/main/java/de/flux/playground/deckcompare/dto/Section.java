@@ -13,9 +13,9 @@ import lombok.Getter;
 @XmlType
 public class Section {
 
-    @Getter(onMethod = @__({ @XmlAttribute }) )
+    @Getter(onMethod = @__(@XmlAttribute) )
     private String name;
-    @Getter(onMethod = @__({ @XmlElement(name = "card") }) )
+    @Getter(onMethod = @__(@XmlElement(name = "card")) )
     private List<Card> cards;
 
 }

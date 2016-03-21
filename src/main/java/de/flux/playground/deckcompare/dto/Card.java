@@ -18,11 +18,11 @@ public class Card {
     private static final int MIN_QUANTITY = 1;
     private static final int MAX_QUANTITY = 3;
 
-    @Getter(onMethod = @__({ @XmlAttribute(name = "qty") }) )
+    @Getter(onMethod = @__(@XmlAttribute(name = "qty")) )
     private int quantity = 0;
-    @Getter(onMethod = @__({ @XmlAttribute }) )
+    @Getter(onMethod = @__(@XmlAttribute) )
     private String id = null;
-    @Getter(onMethod = @__({ @XmlValue }) )
+    @Getter(onMethod = @__(@XmlValue) )
     private String value = null;
 
     public void setQuantity(int quantity) {

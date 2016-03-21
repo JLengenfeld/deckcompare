@@ -13,9 +13,9 @@ import lombok.Getter;
 @XmlRootElement
 public class Deck {
 
-    @Getter(onMethod = @__({ @XmlAttribute(name = "game") }) )
+    @Getter(onMethod = @__(@XmlAttribute(name = "game")) )
     private String id;
-    @Getter(onMethod = @__({ @XmlElement(name = "section") }) )
+    @Getter(onMethod = @__(@XmlElement(name = "section")) )
     private List<Section> sections;
     private String notes;
 
