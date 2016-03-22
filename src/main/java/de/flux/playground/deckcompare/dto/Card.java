@@ -8,7 +8,6 @@ import org.apache.commons.lang3.Validate;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 
 @Data
 @EqualsAndHashCode(exclude = { "quantity" })
@@ -18,16 +17,28 @@ public class Card {
     private static final int MIN_QUANTITY = 1;
     private static final int MAX_QUANTITY = 3;
 
-    @Getter(onMethod = @__(@XmlAttribute(name = "qty")) )
     private int quantity = 0;
-    @Getter(onMethod = @__(@XmlAttribute) )
     private String id = null;
-    @Getter(onMethod = @__(@XmlValue) )
     private String value = null;
 
     public void setQuantity(int quantity) {
         Validate.inclusiveBetween(MIN_QUANTITY, MAX_QUANTITY, quantity);
         this.quantity = quantity;
+    }
+
+    @XmlAttribute(name = "qty")
+    public int getQuantity() {
+        return quantity;
+    }
+
+    @XmlAttribute
+    public String getId() {
+        return id;
+    }
+
+    @XmlValue
+    public String getValue() {
+        return value;
     }
 
 }
