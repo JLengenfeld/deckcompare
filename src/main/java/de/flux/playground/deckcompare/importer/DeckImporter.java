@@ -1,6 +1,7 @@
 package de.flux.playground.deckcompare.importer;
 
 import static java.lang.String.format;
+import static org.apache.commons.lang3.Validate.notNull;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -10,14 +11,12 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import org.apache.commons.lang3.Validate;
-
 import de.flux.playground.deckcompare.dto.Deck;
 
 public class DeckImporter {
 
     public Deck importDeck(URL url) {
-        Validate.notNull(url);
+        notNull(url);
 
         try {
             return importDeck(new File(url.toURI()));
@@ -27,6 +26,8 @@ public class DeckImporter {
     }
 
     public Deck importDeck(File file) {
+        notNull(file);
+
         Deck deck = new Deck();
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Deck.class);
