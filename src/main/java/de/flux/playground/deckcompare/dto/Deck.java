@@ -28,7 +28,7 @@ public class Deck {
     public List<Card> getCards() {
         List<Card> cards = new ArrayList<Card>();
 
-        if (sections.size() > DEFAULT_SECTIONS) {
+        if (sections.size() >= DEFAULT_SECTIONS) {
             cards = sections.get(CARDS_SECTION).getCards();
         }
 
