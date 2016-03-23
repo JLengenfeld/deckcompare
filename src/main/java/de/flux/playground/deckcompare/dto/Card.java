@@ -10,8 +10,13 @@ import org.apache.commons.lang3.Validate;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 @Data
+@NoArgsConstructor(force = true)
+@RequiredArgsConstructor
 @EqualsAndHashCode(exclude = { "quantity" })
 @XmlType
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -22,10 +27,12 @@ public class Card {
 
     @XmlAttribute(name = "qty")
     private int quantity = 0;
+    @NonNull
     @XmlAttribute
-    private String id = null;
+    private String id;
+    @NonNull
     @XmlValue
-    private String value = null;
+    private String value;
 
     public void setQuantity(int quantity) {
         Validate.inclusiveBetween(MIN_QUANTITY, MAX_QUANTITY, quantity);
