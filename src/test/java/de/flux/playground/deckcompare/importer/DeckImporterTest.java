@@ -4,7 +4,6 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
 
@@ -23,7 +22,7 @@ public class DeckImporterTest {
     public void importDeck() throws Exception {
         DeckImporter importer = new DeckImporter();
 
-        File deckFile = obtainDeckFile("the-fun-ends-here-shl-jinteki-edition-1st-.o8d");
+        URL deckFile = obtainDeckUrl("the-fun-ends-here-shl-jinteki-edition-1st-.o8d");
         Deck deck = importer.importDeck(deckFile);
 
         assertThat(deck.getId(), is("0f38e453-26df-4c04-9d67-6d43de939c77"));
@@ -60,9 +59,8 @@ public class DeckImporterTest {
         assertThat(regularCard.getValue(), is("Déjà Vu"));
     }
 
-    private File obtainDeckFile(String fileName) throws URISyntaxException {
-        URL url = this.getClass().getResource(fileName);
-        return new File(url.toURI());
+    private URL obtainDeckUrl(String fileName) throws URISyntaxException {
+        return this.getClass().getResource(fileName);
     }
 
 }
