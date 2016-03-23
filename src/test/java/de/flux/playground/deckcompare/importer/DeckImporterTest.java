@@ -22,7 +22,7 @@ public class DeckImporterTest {
     public void importDeck() throws Exception {
         DeckImporter importer = new DeckImporter();
 
-        URL deckFile = obtainDeckUrl("the-fun-ends-here-shl-jinteki-edition-1st-.o8d");
+        URL deckFile = obtainDeckUrl("/decks/the-fun-ends-here-shl-jinteki-edition-1st-.o8d");
         Deck deck = importer.importDeck(deckFile);
 
         assertThat(deck.getId(), is("0f38e453-26df-4c04-9d67-6d43de939c77"));
