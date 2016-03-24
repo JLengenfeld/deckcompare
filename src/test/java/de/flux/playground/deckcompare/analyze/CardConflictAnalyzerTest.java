@@ -10,20 +10,15 @@ import de.flux.playground.deckcompare.dto.Card;
 
 public class CardConflictAnalyzerTest {
 
-    private Card emptyCard = new Card();
-    private Card cardQuantityTwo = new Card();
-    private Card cardQuantityOne = new Card();
-    private Card otherCardQuantityTwo = new Card();
+    private Card emptyCard = new Card("1", "value");
+    private Card cardQuantityTwo = new Card("2", "First Card");
+    private Card cardQuantityOne = new Card("2", "First Card");
+    private Card otherCardQuantityTwo = new Card("3", "Second Card");
 
     @Before
     public void before() {
-        cardQuantityTwo.setValue("FirstCard");
         cardQuantityTwo.setQuantity(2);
-
-        cardQuantityOne.setValue("FirstCard");
         cardQuantityOne.setQuantity(1);
-
-        otherCardQuantityTwo.setValue("SecondCard");
         otherCardQuantityTwo.setQuantity(2);
     }
 
