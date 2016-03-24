@@ -1,6 +1,6 @@
 package de.flux.playground.deckcompare.dto;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -26,7 +26,7 @@ public class Deck {
     private String notes;
 
     public List<Card> getCards() {
-        List<Card> cards = new ArrayList<Card>();
+        List<Card> cards = Collections.emptyList();
 
         if (sections.size() >= DEFAULT_SECTIONS) {
             cards = sections.get(CARDS_SECTION).getCards();

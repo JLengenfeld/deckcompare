@@ -18,7 +18,7 @@ public class DeckImporterTest {
 
     private static final int FIRST_SECTION = 0;
     private static final int SECOND_SECTION = 1;
-    private DeckImporter importer = new DeckImporter();;
+    private DeckImporter importer = new DeckImporter();
 
     @Test
     public void importDeck() throws Exception {
