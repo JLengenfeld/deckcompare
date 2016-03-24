@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="0f38e453-26df-4c04-9d67-6d43de939c77">
+  <section name="Identity">
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda07029">MaxX: Maximum Punk Rock</card>
+
+  <section name="R&amp;D / Stack">
+    <card qty="3" id="bc0f047c-01b1-427f-a439-d451eda01002">Déjà Vu</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda01007">Corroder</card>
+    <card qty="1" id="bc0f047c-01b1-427f-a439-d451eda01011">Mimic</card>
+  </section>
+  <notes><![CDATA[
+Some Notes
+]]></notes>
+</deck>

@@ -24,6 +24,10 @@ public class DeckImporter {
     }
 
     public Deck importDeck(@NonNull File file) {
+        if (!file.exists()) {
+            throw new IllegalArgumentException(format("File '%s' does not exist!", file));
+        }
+
         Deck deck = new Deck();
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(Deck.class);
@@ -32,7 +36,7 @@ public class DeckImporter {
             deck = (Deck) jaxbUnmarshaller.unmarshal(file);
 
         } catch (JAXBException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Could not import deck", e);
         }
 
         return deck;
