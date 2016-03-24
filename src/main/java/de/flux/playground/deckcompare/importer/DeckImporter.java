@@ -36,7 +36,7 @@ public class DeckImporter {
             deck = (Deck) jaxbUnmarshaller.unmarshal(file);
 
         } catch (JAXBException e) {
-            throw new RuntimeException("Could not import deck", e);
+            throw new ImportException("Could not import deck", e);
         }
 
         return deck;

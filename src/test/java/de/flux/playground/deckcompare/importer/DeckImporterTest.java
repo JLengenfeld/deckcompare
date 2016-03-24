@@ -45,7 +45,7 @@ public class DeckImporterTest {
         importer.importDeck(new File("/does/not/exist"));
     }
 
-    @Test(expected = RuntimeException.class)
+    @Test(expected = ImportException.class)
     public void exceptionBecauseXmlFileIsMalformed() throws Exception {
         URL malformedFile = obtainDeckUrl("/decks/malformedFile.o8d");
         importer.importDeck(new File(malformedFile.toURI()));
