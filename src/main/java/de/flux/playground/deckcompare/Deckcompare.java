@@ -1,4 +1,4 @@
-package de.flux.playground.deckcompare.controller;
+package de.flux.playground.deckcompare;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
