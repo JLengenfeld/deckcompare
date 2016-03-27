@@ -18,12 +18,12 @@ public class Deckcompare {
 
     @RequestMapping("/")
     @ResponseBody
-    String home() {
+    public String home() {
         return "Hello World!";
     }
 
     @Bean
-    CommandLineRunner init() {
+    public CommandLineRunner init() {
         return (String[] args) -> {
             new File(ROOT).mkdir();
         };
