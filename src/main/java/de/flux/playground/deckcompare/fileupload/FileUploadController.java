@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Controller;
@@ -25,8 +24,6 @@ public class FileUploadController {
     @RequestMapping(method = RequestMethod.GET, value = "/upload")
     public String provideUploadInfo(Model model) {
         File rootFolder = new File(Deckcompare.ROOT);
-        List<String> fileNames = Arrays.stream(rootFolder.listFiles()).map(f -> f.getName())
-                                       .collect(Collectors.toList());
 
         model.addAttribute("files",
                            Arrays.stream(rootFolder.listFiles())
