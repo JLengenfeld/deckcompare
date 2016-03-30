@@ -11,7 +11,8 @@
     <packaging>jar</packaging>
 
     <name>deckcompare</name>
-    <url>http://maven.apache.org</url>
+    <description>Deck comparator for Android: Netrunner decks.</description>
+    <url>http://flux.de/deckcompare</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
