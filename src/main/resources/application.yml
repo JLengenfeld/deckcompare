@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: deckcompare
+  main:
+    banner-mode: console
+server:
+  port: 9090
