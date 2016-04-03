@@ -3,18 +3,23 @@ package de.flux.playground.deckcompare.analyze;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import de.flux.playground.deckcompare.dto.Card;
 import de.flux.playground.deckcompare.dto.Deck;
 import lombok.NonNull;
 
 public class DeckConflictAnalyzer {
 
-    public static List<Card> analyze(@NonNull Deck deckA, @NonNull Deck deckB) {
+    @Autowired
+    private CardConflictAnalyzer cardAnalyzer;
+
+    public List<Card> analyze(@NonNull Deck deckA, @NonNull Deck deckB) {
         ArrayList<Card> conflictedCards = new ArrayList<Card>();
 
         for (Card cardA : deckA.getCards()) {
             for (Card cardB : deckB.getCards()) {
-                if (CardConflictAnalyzer.conflicted(cardA, cardB)) {
+                if (cardAnalyzer.conflicted(cardA, cardB)) {
                     conflictedCards.add(new Card(cardA.getId(), cardA.getValue()));
                 }
             }
