@@ -47,10 +47,6 @@ public class FileUploadController {
             redirectAttributes.addFlashAttribute("message", "Folder separators not allowed");
             return "redirect:upload";
         }
-        if (name.contains("/")) {
-            redirectAttributes.addFlashAttribute("message", "Relative pathnames not allowed");
-            return "redirect:upload";
-        }
 
         if (!file.isEmpty()) {
             try {
