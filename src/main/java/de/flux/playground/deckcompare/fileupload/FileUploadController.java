@@ -33,7 +33,8 @@ public class FileUploadController {
     public String provideUploadInfo(Model model) {
         model.addAttribute("files",
                            Arrays.stream(rootFolder.listFiles())
-                                 .sorted(Comparator.comparingLong(f -> -1 * f.lastModified())).map(f -> f.getName())
+                                 .sorted(Comparator.comparingLong(f -> -1 * f.lastModified()))
+                                 .map(f -> f.getName())
                                  .collect(Collectors.toList()));
 
         return "uploadForm";
@@ -54,7 +55,7 @@ public class FileUploadController {
         if (!file.isEmpty()) {
             try {
                 BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(rootFolder,
-                                                                                                      name)));
+                                                                                                     name)));
                 FileCopyUtils.copy(file.getInputStream(), stream);
                 stream.close();
                 redirectAttributes.addFlashAttribute("message", "You successfully uploaded " + name + "!");

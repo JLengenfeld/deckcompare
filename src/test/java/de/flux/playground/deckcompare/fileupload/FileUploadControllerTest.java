@@ -2,9 +2,7 @@ package de.flux.playground.deckcompare.fileupload;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
-import java.io.File;
 import java.util.List;
 
 import org.junit.Before;
