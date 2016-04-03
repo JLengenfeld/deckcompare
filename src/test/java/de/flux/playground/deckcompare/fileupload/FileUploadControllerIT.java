@@ -26,7 +26,7 @@ public class FileUploadControllerIT {
     private MockMvc mvc;
 
     @Before
-    public void setup() {
+    public void before() {
         mvc = MockMvcBuilders.webAppContextSetup(context).build();
     }
 
