@@ -12,7 +12,7 @@
 
     <name>deckcompare</name>
     <description>Deck comparator for Android: Netrunner decks.</description>
-    <url>http://flux.de/deckcompare</url>
+    <url>https://github.com/JLengenfeld/deckcompare</url>
 
     <properties>
         <java.version>1.8</java.version>
