@@ -3,12 +3,9 @@ package de.flux.playground.deckcompare.analyze;
 import de.flux.playground.deckcompare.dto.Card;
 import lombok.NonNull;
 
-public final class CardConflictAnalyzer {
+public class CardConflictAnalyzer {
 
-    private CardConflictAnalyzer() {
-    }
-
-    public static boolean conflicted(@NonNull Card card, @NonNull Card otherCard) {
+    public boolean conflicted(@NonNull Card card, @NonNull Card otherCard) {
 
         boolean isConflicted = false;
 
