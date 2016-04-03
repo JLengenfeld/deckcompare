@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
@@ -16,15 +18,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import de.flux.playground.deckcompare.Deckcompare;
-
 @Controller
 public class FileUploadController {
 
+    private final File rootFolder;
+
+    @Autowired
+    public FileUploadController(@Value("deckcompare.rootfolder") String rootFolderPath) {
+        rootFolder = new File(rootFolderPath);
+        rootFolder.mkdir();
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/upload")
     public String provideUploadInfo(Model model) {
-        File rootFolder = new File(Deckcompare.ROOT);
-
         model.addAttribute("files",
                            Arrays.stream(rootFolder.listFiles())
                                  .sorted(Comparator.comparingLong(f -> -1 * f.lastModified())).map(f -> f.getName())
@@ -47,8 +53,8 @@ public class FileUploadController {
 
         if (!file.isEmpty()) {
             try {
-                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(Deckcompare.ROOT
-                                                                                                     + "/" + name)));
+                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(rootFolder,
+                                                                                                      name)));
                 FileCopyUtils.copy(file.getInputStream(), stream);
                 stream.close();
                 redirectAttributes.addFlashAttribute("message", "You successfully uploaded " + name + "!");
