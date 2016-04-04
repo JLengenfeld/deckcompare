@@ -5,20 +5,12 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import de.flux.playground.deckcompare.Deckcompare;
 import de.flux.playground.deckcompare.dto.Card;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(Deckcompare.class)
 public class CardConflictAnalyzerTest {
 
-    @Autowired
-    private CardConflictAnalyzer cardAnalyzer;
+    private CardConflictAnalyzer cardAnalyzer = new CardConflictAnalyzer();
     private Card emptyCard = new Card("1", "value");
     private Card cardQuantityTwo = new Card("2", "First Card");
     private Card cardQuantityOne = new Card("2", "First Card");

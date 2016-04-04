@@ -16,7 +16,7 @@ public class Deckcompare {
 
     @Bean
     public DeckConflictAnalyzer deckConflictAnalyzer() {
-        return new DeckConflictAnalyzer();
+        return new DeckConflictAnalyzer(cardConflictAnalyzer());
     }
 
     @Bean

@@ -11,8 +11,12 @@ import lombok.NonNull;
 
 public class DeckConflictAnalyzer {
 
-    @Autowired
     private CardConflictAnalyzer cardAnalyzer;
+
+    @Autowired
+    public DeckConflictAnalyzer(CardConflictAnalyzer cardConflictAnalyzer) {
+        cardAnalyzer = cardConflictAnalyzer;
+    }
 
     public List<Card> analyze(@NonNull Deck deckA, @NonNull Deck deckB) {
         ArrayList<Card> conflictedCards = new ArrayList<Card>();
