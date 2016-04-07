@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import de.flux.playground.deckcompare.dto.Card;
 import de.flux.playground.deckcompare.dto.Deck;
 import lombok.NonNull;
 
+@Component
 public class DeckConflictAnalyzer {
 
     private CardConflictAnalyzer cardAnalyzer;
