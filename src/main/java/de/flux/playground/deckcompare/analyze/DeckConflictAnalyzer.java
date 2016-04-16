@@ -4,15 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import de.flux.playground.deckcompare.dto.Card;
 import de.flux.playground.deckcompare.dto.Deck;
 import lombok.NonNull;
 
+@Component
 public class DeckConflictAnalyzer {
 
-    @Autowired
     private CardConflictAnalyzer cardAnalyzer;
+
+    @Autowired
+    public DeckConflictAnalyzer(CardConflictAnalyzer cardConflictAnalyzer) {
+        cardAnalyzer = cardConflictAnalyzer;
+    }
 
     public List<Card> analyze(@NonNull Deck deckA, @NonNull Deck deckB) {
         ArrayList<Card> conflictedCards = new ArrayList<Card>();

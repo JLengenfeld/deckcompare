@@ -1,8 +1,11 @@
 package de.flux.playground.deckcompare.analyze;
 
+import org.springframework.stereotype.Component;
+
 import de.flux.playground.deckcompare.dto.Card;
 import lombok.NonNull;
 
+@Component
 public class CardConflictAnalyzer {
 
     public boolean conflicted(@NonNull Card card, @NonNull Card otherCard) {
